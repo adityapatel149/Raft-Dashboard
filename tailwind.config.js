@@ -4,5 +4,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwindcss"), require("autoprefixer")],
+  corePlugins: {
+    preflight: false, // <== disable this!
+  },
 };

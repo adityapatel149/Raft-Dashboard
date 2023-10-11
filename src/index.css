@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: 0;
+}
 .App {
-  font-family: sans-serif;
+  font-family: Inter, sans-serif;
   text-align: center;
+}
+.sider {
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+p {
+  margin: 0;
 }
