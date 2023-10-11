@@ -9,6 +9,7 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
+  
   <StyleProvider hashPriority="low">
     <App />
   </StyleProvider>,

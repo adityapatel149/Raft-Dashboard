@@ -9,14 +9,26 @@ body {
   font-family: Inter, sans-serif;
   text-align: center;
 }
-.sider {
-  overflow: auto;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-}
+
 p {
   margin: 0;
+}
+:where(
+    .css-dev-only-do-not-override-amq5gd
+  ).ant-menu-light.ant-menu-root.ant-menu-inline,
+:where(.css-dev-only-do-not-override-amq5gd).ant-menu-light
+  > .ant-menu.ant-menu-root.ant-menu-inline,
+:where(
+    .css-dev-only-do-not-override-amq5gd
+  ).ant-menu-light.ant-menu-root.ant-menu-vertical,
+:where(.css-dev-only-do-not-override-amq5gd).ant-menu-light
+  > .ant-menu.ant-menu-root.ant-menu-vertical {
+  border-inline-end: none;
+}
+
+:where(.css-dev-only-do-not-override-ein0h1).ant-menu
+  .ant-menu-item-group
+  .ant-menu-item-group-list
+  .ant-menu-item {
+  padding-inline: 1rem 1rem;
 }
