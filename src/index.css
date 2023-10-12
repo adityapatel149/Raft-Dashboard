@@ -32,3 +32,7 @@ p {
   .ant-menu-item {
   padding-inline: 1rem 1rem;
 }
+
+:where(.css-dev-only-do-not-override-ein0h1).ant-menu .ant-menu-item {
+  display: flex;
+}

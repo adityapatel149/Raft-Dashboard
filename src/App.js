@@ -12,6 +12,15 @@ import Icon, {
 } from "@ant-design/icons";
 
 import { ReactComponent as HouseSvg } from "./assets/icons/ci_house-02.svg";
+import { ReactComponent as BuildingSvg } from "./assets/icons/ci_building-02.svg";
+import { ReactComponent as CompassSvg } from "./assets/icons/ci_compass.svg";
+import { ReactComponent as BasketSvg } from "./assets/icons/ci_shopping-bag-02.svg";
+import { ReactComponent as ChatSvg } from "./assets/icons/heroicons-outline_chat.svg";
+import { ReactComponent as SettingsSvg } from "./assets/icons/ci_settings-future.svg";
+import { ReactComponent as HelpSvg } from "./assets/icons/ci_circle-help.svg";
+import { ReactComponent as FolderSvg } from "./assets/icons/ci_folder.svg";
+import { ReactComponent as SearchSvg } from "./assets/icons/iconamoon_search.svg";
+import { ReactComponent as ClockSvg } from "./assets/icons/ci_clock.svg";
 
 import {
   ConfigProvider,
@@ -41,10 +50,14 @@ const items = [
     null,
     [
       getItem("Home", "home", <Icon component={() => <HouseSvg />} />),
-      getItem("Analytic", "analytic", <LineChartOutlined />),
-      getItem("Explore", "explore", <CompassOutlined />),
-      getItem("Shop", "shop", <ShopOutlined />),
-      getItem("Inbox", "inbox", <MessageOutlined />),
+      getItem(
+        "Analytic",
+        "analytic",
+        <Icon component={() => <BuildingSvg />} />,
+      ),
+      getItem("Explore", "explore", <Icon component={() => <CompassSvg />} />),
+      getItem("Shop", "shop", <Icon component={() => <BasketSvg />} />),
+      getItem("Inbox", "inbox", <Icon component={() => <ChatSvg />} />),
     ],
     "group",
   ),
@@ -53,8 +66,12 @@ const items = [
     "tools",
     null,
     [
-      getItem("Settings", "settings", <SettingOutlined />),
-      getItem("Help", "help", <QuestionCircleOutlined />),
+      getItem(
+        "Settings",
+        "settings",
+        <Icon component={() => <SettingsSvg />} />,
+      ),
+      getItem("Help", "help", <Icon component={() => <HelpSvg />} />),
     ],
     "group",
   ),
@@ -63,8 +80,12 @@ const items = [
     "projects",
     null,
     [
-      getItem("Amazon", "amazon", <FolderOutlined />),
-      getItem("InvinityHQ", "invinityhq", <FolderOutlined />),
+      getItem("Amazon", "amazon", <Icon component={() => <FolderSvg />} />),
+      getItem(
+        "InvinityHQ",
+        "invinityhq",
+        <Icon component={() => <FolderSvg />} />,
+      ),
     ],
     "group",
   ),
@@ -148,7 +169,7 @@ const App = () => {
                 </div>
                 <div className="search-button flex w-12 h-12 flex-col justify-center items-center shrink-0 bg-[#EEE] p-2 rounded-[3rem]">
                   <Icon
-                    component={() => <HouseSvg className="stroke-[#989FA8]" />}
+                    component={() => <SearchSvg className="stroke-[#989FA8]" />}
                   />
                 </div>
               </div>
@@ -162,7 +183,7 @@ const App = () => {
               textAlign: "center",
             }}
           >
-            Ant Design ©2023 Created by Ant UED
+            Ant Design ©2023 Created by Ant UEDs
           </Footer>
         </Layout>
       </Layout>
