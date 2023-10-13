@@ -1,3 +1,6 @@
+import { ReactComponent as ArrowDownSvg } from "../assets/icons/dashicons_arrow-down.svg";
+import Icon from "@ant-design/icons";
+
 import { Column } from "@ant-design/plots";
 
 const Chart = () => {
@@ -29,32 +32,61 @@ const Chart = () => {
   ];
   const config = {
     data,
-    autoFit: true,
+
+    autofFit: true,
     xField: "date",
     yField: "sales",
     seriesField: "date",
     xAxis: false,
+    yAxis: {
+      label: {
+        offsetX: -24,
+        style: {
+          fontSize: 14,
+        },
+      },
+      grid: {
+        line: {
+          style: {
+            lineDash: [4, 4],
+          },
+        },
+      },
+    },
+
     legend: {
       position: "bottom",
       flipPage: false,
+      marker: false,
+      label: {
+        style: {
+          fontSize: 14,
+        },
+      },
     },
 
     color: ({ date }) => {
-      /*if (date === "1-10 Aug") {
-        return "#6E62E5";
-      }*/
-
       return "#6E62E5";
     },
+    /*
     label: {
       position: "top",
       // 'top', 'bottom', 'middle',
       style: {
-        fill: "#000",
+        fill: "#fff",
+      },
+      background: {
+        style: { fill: "#000" },
       },
     },
-    appendPadding: 40,
+*/
+    padding: [24, 0, 48, 48],
+    color: ["#C5C0F5", "#6E62E5"],
 
+    columnStyle: {
+      radius: 8,
+    },
+    minColumnWidth: 48,
     meta: {
       sales: {
         min: 20,
@@ -66,7 +98,30 @@ const Chart = () => {
       },
     },
   };
-  return <Column {...config} />;
+
+  return (
+    <div className="flex flex-col items-start flex-[1_0_0] self-stretch gap-10">
+      <div className="flex justify-between items-end self-stretch">
+        <div className="flex items-end gap-2">
+          <p className="text-[#1E1E1E] text-xl not-italic font-medium leading-[normal] tracking-[-0.03125rem]">
+            Analytic
+          </p>
+          <p className="text-[#3DC764] text-base not-italic font-medium leading-[normal] tracking-[-0.025rem]">
+            +5.4%
+          </p>
+        </div>
+        <div className="flex justify-end items-start">
+          <p className="text-[#1E1E1E] text-sm not-italic font-normal leading-[normal] tracking-[-0.02188rem]">
+            Month
+          </p>
+          <Icon component={() => <ArrowDownSvg className="fill-[#1E1E1E]" />} />
+        </div>
+      </div>
+      <div className="flex flex-[1_0_0] self-stretch">
+        <Column {...config} />
+      </div>
+    </div>
+  );
 };
 
 export default Chart;
