@@ -43,6 +43,7 @@ const Chart = () => {
         offsetX: -24,
         style: {
           fontSize: 14,
+          fill: "#999DA4",
         },
       },
       grid: {
@@ -58,9 +59,10 @@ const Chart = () => {
       position: "bottom",
       flipPage: false,
       marker: false,
-      label: {
+      itemName: {
         style: {
           fontSize: 14,
+          fill: "#999DA4",
         },
       },
     },
