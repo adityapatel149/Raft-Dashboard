@@ -4,13 +4,13 @@ import Chart from "./Chart";
 
 const SalesCard = () => {
   return (
-    <div className="w-full flex gap-[10rem] items-start self-stretch rounded-[1.25rem] border border-[#eee] border-solid px-9 py-10">
+    <div className="w-full flex justify-between items-start self-stretch rounded-[1.25rem] border border-[#eee] border-solid px-9 py-10">
       <div className="inline-flex flex-col items-start gap-14">
         <div className="flex flex-col items-start gap-[0.5625rem]">
-          <p className="text-[#1E1E1E] text-[1.625rem] font-medium leading-[normal]">
-            Total Sales and Cost
+          <p className="text-neutral-950 text-[1.625rem] font-semibold leading-[normal] tracking-[-0.0325rem]">
+            Total Sales & Cost
           </p>
-          <p className="text-[#717780] text-lg not-italic font-normal leading-[normal]">
+          <p className="text-neutral-500 text-lg not-italic font-normal leading-[normal] tracking-[-0.0675rem]">
             Last 60 days
           </p>
         </div>
@@ -33,7 +33,7 @@ const SalesCard = () => {
             <p className="text-[#3DC764] text-lg font-normal not-italic leading-[normal">
               +8.20k
             </p>
-            <p className="text-[#717780] text-lg not-italic font-normal leading-[normal]">
+            <p className="text-neutral-500 text-lg not-italic font-normal leading-[normal]">
               vs prev. 60 days
             </p>
           </div>

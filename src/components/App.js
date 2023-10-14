@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import HeaderContent from "./HeaderContent";
 import SalesCard from "./SalesCard";
 import Transactions from "./Transactions";
+import Meetings from "./Meetings";
 
 import { ReactComponent as ClockSvg } from "../assets/icons/ci_clock.svg";
 import menuItems from "../menuItems";
@@ -24,6 +25,9 @@ const App = () => {
   return (
     <ConfigProvider
       theme={{
+        token: {
+          fontFamily: "Inter, sans-serif",
+        },
         components: {
           Menu: {
             itemActiveBg: "rgba(0, 0, 0, 0.06)",
@@ -44,7 +48,7 @@ const App = () => {
           /*collapsedWidth={0}*/
           /*trigger={null}*/
           theme="light"
-          width="20%"
+          width="18%"
         >
           <Logo />
 
@@ -74,6 +78,15 @@ const App = () => {
             Ant Design ©2023 Created by Ant UEDs
           </Footer>
         </Layout>
+        <Sider
+          /*breakpoint={"lg"}*/
+          /*collapsedWidth={0}*/
+          /*trigger={null}*/
+          theme="light"
+          width="24%"
+        >
+          <Meetings />
+        </Sider>
       </Layout>
     </ConfigProvider>
   );

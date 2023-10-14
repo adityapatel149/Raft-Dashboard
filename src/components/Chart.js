@@ -82,7 +82,7 @@ const Chart = () => {
       },
     },
 */
-    padding: [24, 0, 48, 48],
+    padding: [8, 0, 48, 48],
     color: ["#C5C0F5", "#6E62E5"],
 
     columnStyle: {
@@ -102,7 +102,7 @@ const Chart = () => {
   };
 
   return (
-    <div className="flex flex-col items-start flex-[1_0_0] self-stretch gap-10">
+    <div className="flex flex-col items-start self-stretch gap-10">
       <div className="flex justify-between items-end self-stretch">
         <div className="flex items-end gap-2">
           <p className="text-[#1E1E1E] text-xl not-italic font-medium leading-[normal] tracking-[-0.03125rem]">
