@@ -70,13 +70,13 @@ const App = () => {
             <SalesCard />
             <Transactions />
           </Content>
-          <Footer
+          {/*<Footer
             style={{
               textAlign: "center",
             }}
           >
             Ant Design ©2023 Created by Ant UEDs
-          </Footer>
+          </Footer>*/}
         </Layout>
         <Sider
           /*breakpoint={"lg"}*/

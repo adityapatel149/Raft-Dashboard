@@ -4,11 +4,12 @@ import Icon, {
   UserOutlined,
   AntDesignOutlined,
 } from "@ant-design/icons";
+import CustomerName from "./CustomerName";
 
 const data = [
   {
     key: "1",
-    name: "Floyd Johntosan",
+    name: "Flyod Johntosan",
     email: "johntosan@gmail.com",
     status: "success",
     date: "Nov 02, 2021",
@@ -17,7 +18,7 @@ const data = [
   },
   {
     key: "2",
-    name: "Floyd Johntosan",
+    name: "Flyod Johntosan",
     email: "johntosan@gmail.com",
     status: "pending",
     date: "Nov 02, 2021",
@@ -26,7 +27,7 @@ const data = [
   },
   {
     key: "3",
-    name: "Floyd Johntosan",
+    name: "Flyod Johntosan",
     email: "johntosan@gmail.com",
     status: "success",
     date: "Nov 02, 2021",
@@ -35,7 +36,7 @@ const data = [
   },
   {
     key: "4",
-    name: "Floyd Johntosan",
+    name: "Flyod Johntosan",
     email: "johntosan@gmail.com",
     status: "success",
     date: "Nov 02, 2021",
@@ -68,32 +69,32 @@ const columns = [
     title: "Customer",
     dataIndex: "name",
     key: "name",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <p>{text}</p>,
   },
   {
     title: "Status",
     dataIndex: "status",
     key: "status",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <p>{text}</p>,
   },
   {
     title: "Date",
     dataIndex: "date",
     key: "date",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <p>{text}</p>,
   },
   {
     title: "Invoice",
     key: "invoice",
     dataIndex: "invoice",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <p>{text}</p>,
   },
   {
     title: "People",
     key: "people",
     dataIndex: "people",
 
-    render: (text) => <a>{text}</a>,
+    render: (text) => <p>{text}</p>,
   },
 ];
 

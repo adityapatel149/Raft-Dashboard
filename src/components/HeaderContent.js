@@ -17,7 +17,6 @@ const HeaderContent = () => {
               <Avatar
                 src="/images/profilepic.jpeg"
                 shape="circle"
-                size="xxl"
                 className="w-full h-full"
               />
               <div className="bg-white absolute w-6 h-6 rounded-3xl right-0 top-0 translate-x-1 -translate-y-1" />
