@@ -1,5 +1,9 @@
-import { Button, Dropdown, Space, Table } from "antd";
-import Icon, { DownOutlined } from "@ant-design/icons";
+import { Button, Dropdown, Space, Table, Avatar, Tooltip } from "antd";
+import Icon, {
+  DownOutlined,
+  UserOutlined,
+  AntDesignOutlined,
+} from "@ant-design/icons";
 
 const data = [
   {
@@ -59,41 +63,95 @@ const menuProps = [
   },
 ];
 
+const columns = [
+  {
+    title: "Customer",
+    dataIndex: "name",
+    key: "name",
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: "Status",
+    dataIndex: "status",
+    key: "status",
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: "Date",
+    dataIndex: "date",
+    key: "date",
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: "Invoice",
+    key: "invoice",
+    dataIndex: "invoice",
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: "People",
+    key: "people",
+    dataIndex: "people",
+
+    render: (text) => <a>{text}</a>,
+  },
+];
+
 const Transactions = () => {
   return (
-    <div className="">
-      <Dropdown
-        menu={{ items: menuProps }}
-        trigger={["click"]}
-        placement="bottomLeft"
-      >
-        <Button>
-          Recepient
-          <DownOutlined />
-        </Button>
-      </Dropdown>
+    <div className="flex flex-start flex-col self-stretch gap-8">
+      <div className="flex self-stretch justify-between items-center">
+        <p className="text-neutral-950 text-[2.5rem] not-italic font-semibold leading-[normal] tracking-[-0.1125rem]">
+          Transaction History
+        </p>
+        <Dropdown
+          menu={{ items: menuProps }}
+          trigger={["click"]}
+          placement="bottomLeft"
+        >
+          <Button>
+            Month
+            <DownOutlined />
+          </Button>
+        </Dropdown>
+      </div>
 
-      <Dropdown
-        menu={{ items: menuProps }}
-        trigger={["click"]}
-        placement="bottomLeft"
-      >
-        <Button>
-          Amount
-          <DownOutlined />
-        </Button>
-      </Dropdown>
+      <div className="flex flex-start gap-3">
+        <Dropdown
+          menu={{ items: menuProps }}
+          trigger={["click"]}
+          placement="bottomLeft"
+        >
+          <Button>
+            Recepient
+            <DownOutlined />
+          </Button>
+        </Dropdown>
 
-      <Dropdown
-        menu={{ items: menuProps }}
-        trigger={["click"]}
-        placement="bottomLeft"
-      >
-        <Button>
-          Status
-          <DownOutlined />
-        </Button>
-      </Dropdown>
+        <Dropdown
+          menu={{ items: menuProps }}
+          trigger={["click"]}
+          placement="bottomLeft"
+        >
+          <Button>
+            Amount
+            <DownOutlined />
+          </Button>
+        </Dropdown>
+
+        <Dropdown
+          menu={{ items: menuProps }}
+          trigger={["click"]}
+          placement="bottomLeft"
+        >
+          <Button>
+            Status
+            <DownOutlined />
+          </Button>
+        </Dropdown>
+      </div>
+
+      <Table columns={columns} dataSource={data} />
     </div>
   );
 };
