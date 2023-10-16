@@ -28,7 +28,7 @@ const data = [
     status: "success",
     date: "Nov 02, 2021",
     invoice: 10000,
-    people: ["a", "b", "c", "d", "e"],
+    people: ["a", "b", "c", "d", "e", "e", "e", "e"],
   },
   {
     key: "2",
