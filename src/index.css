@@ -40,3 +40,7 @@ button {
   padding-block: 0px;
   padding-inline: 0px;
 }
+
+span.ant-avatar-string {
+  transform: scale(1) translate(-50%, -5%) !important;
+}

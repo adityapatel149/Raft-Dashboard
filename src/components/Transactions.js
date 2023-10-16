@@ -17,6 +17,8 @@ import Icon, {
 import { ReactComponent as ArrowDownSvg } from "../assets/icons/iconamoon_arrow-down-2.svg";
 import { ReactComponent as CalendarSvg } from "../assets/icons/ant-design_calendar-outlined.svg";
 import CustomerName from "./CustomerName";
+import StatusTag from "./StatusTag";
+import People from "./People";
 
 const data = [
   {
@@ -44,7 +46,7 @@ const data = [
     status: "success",
     date: "Nov 02, 2021",
     invoice: 10000,
-    people: ["a", "b", "c", "d", "e"],
+    people: ["a", "b", "c", "d"],
   },
   {
     key: "4",
@@ -89,7 +91,7 @@ const columns = [
     title: "Status",
     dataIndex: "status",
     key: "status",
-    render: (text) => <p>{text}</p>,
+    render: (text, record) => <StatusTag status={record.status} />,
   },
   {
     title: "Date",
@@ -101,14 +103,14 @@ const columns = [
     title: "Invoice",
     key: "invoice",
     dataIndex: "invoice",
-    render: (text) => <p>{text}</p>,
+    render: (text) => <p>${text}</p>,
   },
   {
     title: "People",
     key: "people",
     dataIndex: "people",
 
-    render: (text) => <p>{text}</p>,
+    render: (text, record) => <People people={record.people} />,
   },
 ];
 
