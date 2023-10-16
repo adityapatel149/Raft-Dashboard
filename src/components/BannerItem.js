@@ -7,7 +7,7 @@ export default function BannerItem({ title, price, prev, pill }) {
         className="w-16 h-16 rounded-[4rem]"
       />
       <div className="flex flex-col items-start gap-4">
-        <p className="text-white text-lg not-italic font-normal leading-[normal] opacity-50">
+        <p className="text-white text-lg not-italic font-light leading-[normal] opacity-60">
           {title}
         </p>
         <div className="flex flex-col items-start gap-1.5">
@@ -20,7 +20,7 @@ export default function BannerItem({ title, price, prev, pill }) {
             </div>
           </div>
           <div className="flex items-center gap-[0.25rem]">
-            <p className="text-white text-lg opacity-60 not-italic font-normal leading-[normal] ">
+            <p className="text-white text-lg opacity-60 not-italic font-light leading-[normal] ">
               Previous month
             </p>
             <p className="text-white text-lg opacity-100"> ${prev}</p>

@@ -24,10 +24,10 @@ const HeaderContent = () => {
           </div>
 
           <div className="flex flex-col items-start gap-3">
-            <h1 className="m-0 mx-0 text-neutral-950 text-[2.5rem] not-italic font-semibold leading-[normal] tracking-[-0.1125rem]">
+            <h1 className="m-0 mx-0 text-neutral-950 text-[2.5rem] not-italic font-medium leading-[normal] ">
               Good Evening Team!
             </h1>
-            <p className="m-0 text-neutral-400 text-[1rem] not-italic font-normal leading-[normal] tracking-[-0.02rem] ;">
+            <p className="m-0 text-[#717780] text-[1rem] not-italic font-light leading-[normal] ">
               Have an in-depth look at all the metrics within your dashboard.
             </p>
           </div>

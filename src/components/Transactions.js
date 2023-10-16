@@ -1,9 +1,21 @@
-import { Button, Dropdown, Space, Table, Avatar, Tooltip } from "antd";
+import {
+  ConfigProvider,
+  Button,
+  Dropdown,
+  Space,
+  Table,
+  Avatar,
+  Tooltip,
+} from "antd";
 import Icon, {
   DownOutlined,
   UserOutlined,
   AntDesignOutlined,
+  CalendarOutlined,
 } from "@ant-design/icons";
+
+import { ReactComponent as ArrowDownSvg } from "../assets/icons/iconamoon_arrow-down-2.svg";
+import { ReactComponent as CalendarSvg } from "../assets/icons/ant-design_calendar-outlined.svg";
 import CustomerName from "./CustomerName";
 
 const data = [
@@ -69,7 +81,9 @@ const columns = [
     title: "Customer",
     dataIndex: "name",
     key: "name",
-    render: (text) => <p>{text}</p>,
+    render: (text, record) => (
+      <CustomerName name={record.name} email={record.email} />
+    ),
   },
   {
     title: "Status",
@@ -100,60 +114,96 @@ const columns = [
 
 const Transactions = () => {
   return (
-    <div className="flex flex-start flex-col self-stretch gap-8">
-      <div className="flex self-stretch justify-between items-center">
-        <p className="text-neutral-950 text-[2.5rem] not-italic font-semibold leading-[normal] tracking-[-0.1125rem]">
-          Transaction History
-        </p>
-        <Dropdown
-          menu={{ items: menuProps }}
-          trigger={["click"]}
-          placement="bottomLeft"
-        >
-          <Button>
-            Month
-            <DownOutlined />
-          </Button>
-        </Dropdown>
+    <ConfigProvider
+      theme={{
+        components: {
+          Button: {
+            contentFontSize: 20,
+          },
+          Table: {
+            fontFamily: "Inter, sans-serif",
+            headerBg: "#fff",
+            headerColor: "#717780",
+            headerSplitColor: false,
+            fontSize: 16,
+            fontWeightStrong: 300,
+            padding: 8,
+          },
+        },
+      }}
+    >
+      <div className="flex flex-start flex-col self-stretch gap-8">
+        <div className="flex self-stretch justify-between items-center">
+          <p className="text-neutral-950 text-[2.5rem] not-italic font-medium leading-[normal] tracking-[-0.1125rem]">
+            Transaction History
+          </p>
+          <Dropdown
+            menu={{ items: menuProps }}
+            trigger={["click"]}
+            placement="bottomLeft"
+          >
+            <Button className="border-0">
+              <div className="flex rounded-[0.75rem] border border-[#ddd] border-solid inline-flex items-center gap-3 px-[1.25rem] py-3 ">
+                <CalendarSvg className="fill-[#989FA8] w-8 h-8" />
+                <p className="text-neutral-800 text-xl not-italic font-normal leading-[normal] tracking-[-0.05rem]">
+                  Month
+                </p>
+                <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
+              </div>
+            </Button>
+          </Dropdown>
+        </div>
+
+        <div className="flex flex-start gap-3">
+          <Dropdown
+            menu={{ items: menuProps }}
+            trigger={["click"]}
+            placement="bottomLeft"
+          >
+            <Button className="border-0">
+              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
+                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] tracking-[-0.05rem]">
+                  Recepient
+                </p>
+                <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
+              </div>
+            </Button>
+          </Dropdown>
+
+          <Dropdown
+            menu={{ items: menuProps }}
+            trigger={["click"]}
+            placement="bottomLeft"
+          >
+            <Button className="border-0">
+              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
+                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] tracking-[-0.05rem]">
+                  Amount
+                </p>
+                <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
+              </div>
+            </Button>
+          </Dropdown>
+
+          <Dropdown
+            menu={{ items: menuProps }}
+            trigger={["click"]}
+            placement="bottomLeft"
+          >
+            <Button className="border-0">
+              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
+                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] tracking-[-0.05rem]">
+                  Status
+                </p>
+                <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
+              </div>
+            </Button>
+          </Dropdown>
+        </div>
+
+        <Table columns={columns} dataSource={data} pagination={false} />
       </div>
-
-      <div className="flex flex-start gap-3">
-        <Dropdown
-          menu={{ items: menuProps }}
-          trigger={["click"]}
-          placement="bottomLeft"
-        >
-          <Button>
-            Recepient
-            <DownOutlined />
-          </Button>
-        </Dropdown>
-
-        <Dropdown
-          menu={{ items: menuProps }}
-          trigger={["click"]}
-          placement="bottomLeft"
-        >
-          <Button>
-            Amount
-            <DownOutlined />
-          </Button>
-        </Dropdown>
-
-        <Dropdown
-          menu={{ items: menuProps }}
-          trigger={["click"]}
-          placement="bottomLeft"
-        >
-          <Button>
-            Status
-            <DownOutlined />
-          </Button>
-        </Dropdown>
-      </div>
-
-      <Table columns={columns} dataSource={data} />
-    </div>
+    </ConfigProvider>
   );
 };
 

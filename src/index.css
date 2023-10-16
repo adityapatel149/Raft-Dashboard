@@ -29,3 +29,14 @@ p {
 .ant-menu .ant-menu-item {
   display: flex;
 }
+
+.ant-btn {
+  font-size: 20px;
+  height: auto;
+  padding: 0;
+}
+
+button {
+  padding-block: 0px;
+  padding-inline: 0px;
+}

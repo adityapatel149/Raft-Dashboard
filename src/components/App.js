@@ -26,7 +26,7 @@ const App = () => {
     <ConfigProvider
       theme={{
         token: {
-          fontFamily: "Inter, sans-serif",
+          //fontFamily: "Inter, sans-serif",
         },
         components: {
           Menu: {
@@ -37,6 +37,9 @@ const App = () => {
             itemHeight: 56,
             iconSize: 24,
             iconMarginInlineEnd: "1rem",
+            items: {
+              fontSize: 200,
+            },
           },
         },
       }}

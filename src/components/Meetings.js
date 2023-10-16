@@ -44,18 +44,18 @@ const Meetings = () => {
         </div>
 
         <div className="flex flex-col items-start gap-4 self-stretch">
-          <p className="text-[#6E62E5] text-lg not-italic font-normal leading-[normal] tracking-[-0.0675rem]">
+          <p className="text-[#6E62E5] text-lg not-italic font-light leading-[normal] tracking-[-0.0675rem]">
             Premium Access
           </p>
           <div className="flex flex-col justify-end items-start gap-0.5">
-            <p className="text-neutral-950 text-[2.5rem] not-italic font-semibold leading-[normal] tracking-[-0.1125rem]">
+            <p className="text-neutral-950 text-[2.5rem] not-italic font-medium leading-[normal] tracking-[-0.1125rem]">
               Take Back
             </p>
-            <p className="text-neutral-950 text-[2.5rem] not-italic font-semibold leading-[normal] tracking-[-0.1125rem]">
+            <p className="text-neutral-950 text-[2.5rem] not-italic font-medium leading-[normal] tracking-[-0.1125rem]">
               Your Creative
             </p>
             <div className="flex items-start gap-6">
-              <p className="text-neutral-950 text-[2.5rem] not-italic font-semibold leading-[normal] tracking-[-0.1125rem]">
+              <p className="text-neutral-950 text-[2.5rem] not-italic font-medium leading-[normal] tracking-[-0.1125rem]">
                 Control
               </p>
               <div className="flex items-end gap-[-1.3125rem] px-0 py-2">
@@ -126,7 +126,7 @@ const Meetings = () => {
             </div>
           </div>
           <div className=" flex items-start gap-6">
-            <p className="text-neutral-400 text-lg not-italic font-normal leading-[normal] tracking-[-0.0675rem]">
+            <p className="text-neutral-400 text-lg not-italic font-light leading-[normal] tracking-[-0.0675rem]">
               The Profesional Platform
             </p>
             <Icon

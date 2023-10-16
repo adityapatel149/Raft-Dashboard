@@ -6,7 +6,7 @@ import { Column } from "@ant-design/plots";
 const Chart = () => {
   const data = [
     {
-      date: "1-5 Aug",
+      date: "1-10 Aug",
       sales: 35,
     },
     {
@@ -14,7 +14,7 @@ const Chart = () => {
       sales: 47,
     },
     {
-      date: "11-15 Aug",
+      date: "11-20 Aug",
       sales: 39,
     },
     {
@@ -22,18 +22,19 @@ const Chart = () => {
       sales: 60,
     },
     {
-      date: "20-25 Aug",
+      date: "21-30 Aug",
       sales: 30,
     },
     {
-      date: "26-30 Aug",
+      date: "1-10 Nov",
       sales: 43,
     },
   ];
   const config = {
     data,
 
-    autofFit: true,
+    //autofFit: true,
+    width: 480,
     xField: "date",
     yField: "sales",
     seriesField: "date",
@@ -59,8 +60,12 @@ const Chart = () => {
       position: "bottom",
       flipPage: false,
       marker: false,
+      offsetX: 24,
+
+      itemSpacing: 48,
       itemName: {
         style: {
+          opacity: "30%",
           fontSize: 14,
           fill: "#999DA4",
         },
@@ -102,7 +107,7 @@ const Chart = () => {
   };
 
   return (
-    <div className="flex flex-col items-start self-stretch gap-10">
+    <div className="flex flex-col items-start self-stretch gap-10  px-10 pt-8 pb-4">
       <div className="flex justify-between items-end self-stretch">
         <div className="flex items-end gap-2">
           <p className="text-[#1E1E1E] text-xl not-italic font-medium leading-[normal] tracking-[-0.03125rem]">
