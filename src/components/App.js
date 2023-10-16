@@ -30,6 +30,8 @@ const App = () => {
         },
         components: {
           Menu: {
+            colorText: "#3f444a",
+            fontSize: 16,
             itemActiveBg: "rgba(0, 0, 0, 0.06)",
             itemSelectedBg: "#6E62E5",
             activeBarBorderWidth: 0,
@@ -37,7 +39,8 @@ const App = () => {
             itemHeight: 56,
             iconSize: 24,
             iconMarginInlineEnd: "1rem",
-            groupTitleLineHeight: 56,
+            itemMarginBlock: "0rem 0.75rem",
+            padding: 8,
           },
         },
       }}

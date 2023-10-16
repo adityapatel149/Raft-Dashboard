@@ -10,7 +10,7 @@ const SalesCard = () => {
           <p className="text-neutral-950 text-[1.625rem] font-medium leading-[normal] tracking-[-0.0325rem]">
             Total Sales & Cost
           </p>
-          <p className="text-neutral-400 text-lg not-italic font-light leading-[normal] tracking-[-0.0675rem]">
+          <p className="text-neutral-400 text-lg not-italic font-light leading-[normal]">
             Last 60 days
           </p>
         </div>
