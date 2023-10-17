@@ -10,7 +10,7 @@ const StatusTag = ({ status }) => {
             : ""
         }`}
       ></div>
-      <p className="text-lg not-italic font-normal leading-[normal] tracking-[-0.05625rem] capitalize">
+      <p className="text-lg not-italic font-medium leading-[normal] capitalize">
         {status}
       </p>
     </div>

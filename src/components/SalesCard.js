@@ -5,7 +5,7 @@ import Chart from "./Chart";
 const SalesCard = () => {
   return (
     <div className="w-full flex justify-between items-start self-stretch rounded-[1.25rem] border-2 border-[#eee] border-solid">
-      <div className="inline-flex flex-col items-start gap-14  px-10 py-8">
+      <div className="inline-flex flex-col items-start justify-between gap-14  px-10 py-8">
         <div className="flex flex-col items-start gap-[0.5625rem]">
           <p className="text-neutral-950 text-[1.625rem] font-medium leading-[normal] tracking-[-0.0325rem]">
             Total Sales & Cost

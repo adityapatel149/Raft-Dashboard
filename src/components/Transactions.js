@@ -97,13 +97,21 @@ const columns = [
     title: "Date",
     dataIndex: "date",
     key: "date",
-    render: (text) => <p>{text}</p>,
+    render: (text) => (
+      <p className="text-neutral-950 text-lg not-italic font-normal leading-[normal] tracking-[-0.05625rem]">
+        {text}
+      </p>
+    ),
   },
   {
     title: "Invoice",
     key: "invoice",
     dataIndex: "invoice",
-    render: (text) => <p>${text}</p>,
+    render: (text) => (
+      <p className="text-neutral-950 text-lg not-italic font-normal leading-[normal] tracking-[-0.05625rem]">
+        ${text}
+      </p>
+    ),
   },
   {
     title: "People",
@@ -136,7 +144,7 @@ const Transactions = () => {
     >
       <div className="flex flex-start flex-col self-stretch gap-8">
         <div className="flex self-stretch justify-between items-center">
-          <p className="text-neutral-950 text-[2.5rem] not-italic font-medium leading-[normal] tracking-[-0.1125rem]">
+          <p className="text-neutral-950 text-[2.5rem] not-italic font-medium leading-[normal] ">
             Transaction History
           </p>
           <Dropdown
@@ -164,7 +172,7 @@ const Transactions = () => {
           >
             <Button className="border-0">
               <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
-                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] tracking-[-0.05rem]">
+                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] ">
                   Recepient
                 </p>
                 <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
@@ -179,7 +187,7 @@ const Transactions = () => {
           >
             <Button className="border-0">
               <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
-                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] tracking-[-0.05rem]">
+                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] ">
                   Amount
                 </p>
                 <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
@@ -194,7 +202,7 @@ const Transactions = () => {
           >
             <Button className="border-0">
               <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
-                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] tracking-[-0.05rem]">
+                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] ">
                   Status
                 </p>
                 <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />

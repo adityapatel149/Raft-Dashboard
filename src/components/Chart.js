@@ -33,7 +33,7 @@ const Chart = () => {
   const config = {
     data,
 
-    //autofFit: true,
+    autofFit: true,
     width: 480,
     xField: "date",
     yField: "sales",

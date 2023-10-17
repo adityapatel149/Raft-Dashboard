@@ -27,6 +27,16 @@ const App = () => {
       theme={{
         token: {
           //fontFamily: "Inter, sans-serif",
+          screenXS: 480,
+          screenSM: 640,
+          screenMD: 768,
+          screenLG: 1024,
+          screenXL: 1280,
+          screenXSMax: 480,
+          screenSMMax: 640,
+          screenMDMax: 768,
+          screenLGMax: 1024,
+          screenXLMax: 1280,
         },
         components: {
           Menu: {
@@ -42,15 +52,24 @@ const App = () => {
             itemMarginBlock: "0rem 0.75rem",
             padding: 8,
           },
+          Layout: {
+            Sider: {
+              xs: "480px",
+              sm: "640px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1280px",
+              xxl: "1536px",
+            },
+          },
         },
       }}
     >
       <Layout hasSider theme="light">
         <Sider
-          className="sidebar overflow-auto fixed left-0 inset-y-0 p-5 border-l-0 border-t-0 border-b-0 border-r-2 border-r-[#eee] border-solid"
-          /*breakpoint={"lg"}*/
-          /*collapsedWidth={0}*/
-          /*trigger={null}*/
+          className="sidebar overflow-auto fixed left-0 inset-y-0 lg:p-5 border-l-0 border-t-0 border-b-0 border-r-2 border-r-[#eee] border-solid"
+          breakpoint={"lg"}
+          collapsible
           theme="light"
           width="18%"
         >
