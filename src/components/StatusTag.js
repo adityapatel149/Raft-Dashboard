@@ -1,6 +1,6 @@
 const StatusTag = ({ status }) => {
   return (
-    <div className="inline-flex h-10 items-center gap-2.5 shrink-0 px-3 py-2 border rounded-[2.5rem] border-solid border-[#DDD]">
+    <div className="inline-flex h-10 items-center gap-2.5 shrink-0 px-3 py-2 border-2 rounded-[2.5rem] border-solid border-[#EEE]">
       <div
         className={`rounded-[1rem] w-2.5 h-2.5 ${
           status === "success"

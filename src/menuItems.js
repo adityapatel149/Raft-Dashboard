@@ -27,27 +27,27 @@ const menuItems = [
       getItem(
         "Home",
         "home",
-        <Icon component={() => <HouseSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <HouseSvg className="stroke-[2.75px]" />} />,
       ),
       getItem(
         "Analytic",
         "analytic",
-        <Icon component={() => <BuildingSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <BuildingSvg className="stroke-[2.75px]" />} />,
       ),
       getItem(
         "Explore",
         "explore",
-        <Icon component={() => <CompassSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <CompassSvg className="stroke-[2.75px]" />} />,
       ),
       getItem(
         "Shop",
         "shop",
-        <Icon component={() => <BasketSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <BasketSvg className="stroke-[2.75px]" />} />,
       ),
       getItem(
         "Inbox",
         "inbox",
-        <Icon component={() => <ChatSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <ChatSvg className="stroke-[2.75px]" />} />,
       ),
     ],
     "group",
@@ -60,12 +60,12 @@ const menuItems = [
       getItem(
         "Settings",
         "settings",
-        <Icon component={() => <SettingsSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <SettingsSvg className="stroke-[2.75px]" />} />,
       ),
       getItem(
         "Help",
         "help",
-        <Icon component={() => <HelpSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <HelpSvg className="stroke-[2.75px]" />} />,
       ),
     ],
     "group",
@@ -78,12 +78,12 @@ const menuItems = [
       getItem(
         "Amazon",
         "amazon",
-        <Icon component={() => <FolderSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <FolderSvg className="stroke-[2.75px]" />} />,
       ),
       getItem(
         "InvinityHQ",
         "invinityhq",
-        <Icon component={() => <FolderSvg className="stroke-[2.5px]" />} />,
+        <Icon component={() => <FolderSvg className="stroke-[2.75px]" />} />,
       ),
     ],
     "group",

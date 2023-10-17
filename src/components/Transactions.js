@@ -145,7 +145,7 @@ const Transactions = () => {
             placement="bottomLeft"
           >
             <Button className="border-0">
-              <div className="flex rounded-[0.75rem] border border-[#ddd] border-solid inline-flex items-center gap-3 px-[1.25rem] py-3 ">
+              <div className="flex rounded-[0.75rem] border border-[#EEE] border-solid inline-flex items-center gap-3 px-[1.25rem] py-3 ">
                 <CalendarSvg className="fill-[#989FA8] w-8 h-8" />
                 <p className="text-neutral-800 text-xl not-italic font-normal leading-[normal] tracking-[-0.05rem]">
                   Month

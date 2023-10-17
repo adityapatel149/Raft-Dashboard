@@ -32,8 +32,12 @@ const HeaderContent = () => {
             </p>
           </div>
         </div>
-        <div className="search-button flex w-12 h-12 flex-col justify-center items-center shrink-0 bg-[#EEE] p-2 rounded-[3rem]">
-          <Icon component={() => <SearchSvg className="stroke-[#989FA8]" />} />
+        <div className="search-button flex w-12 h-12 flex-col justify-center items-center shrink-0 bg-[#EEF1F6] p-2 rounded-[3rem]">
+          <Icon
+            component={() => (
+              <SearchSvg className="stroke-[#989FA8] stroke-[2.75px]" />
+            )}
+          />
         </div>
       </div>
     </div>

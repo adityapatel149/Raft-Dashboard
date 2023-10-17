@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import HeaderContent from "./HeaderContent";
 import SalesCard from "./SalesCard";
 import Transactions from "./Transactions";
-import Meetings from "./Meetings";
+import RightSidebar from "./RightSidebar";
 
 import { ReactComponent as ClockSvg } from "../assets/icons/ci_clock.svg";
 import menuItems from "../menuItems";
@@ -47,7 +47,7 @@ const App = () => {
     >
       <Layout hasSider theme="light">
         <Sider
-          className="sidebar overflow-auto fixed left-0 inset-y-0 p-5 border-l-0 border-t-0 border-b-0 border-r-[#eee] border-r border-solid"
+          className="sidebar overflow-auto fixed left-0 inset-y-0 p-5 border-l-0 border-t-0 border-b-0 border-r-2 border-r-[#eee] border-solid"
           /*breakpoint={"lg"}*/
           /*collapsedWidth={0}*/
           /*trigger={null}*/
@@ -74,13 +74,6 @@ const App = () => {
             <SalesCard />
             <Transactions />
           </Content>
-          {/*<Footer
-            style={{
-              textAlign: "center",
-            }}
-          >
-            Ant Design ©2023 Created by Ant UEDs
-          </Footer>*/}
         </Layout>
         <Sider
           /*breakpoint={"lg"}*/
@@ -89,7 +82,7 @@ const App = () => {
           theme="light"
           width="24%"
         >
-          <Meetings />
+          <RightSidebar />
         </Sider>
       </Layout>
     </ConfigProvider>
