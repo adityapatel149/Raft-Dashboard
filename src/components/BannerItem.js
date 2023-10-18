@@ -10,7 +10,7 @@ export default function BannerItem({ title, price, prev, pill }) {
         <p className="text-white text-lg not-italic font-light leading-[normal] opacity-60">
           {title}
         </p>
-        <div className="flex flex-col sm:flex-row xl:flex-col self-stretch flex-[1_0_0] items-start justify-between xl:gap-1.5">
+        <div className="flex flex-col sm:flex-row xl:flex-col self-stretch flex-[1_0_0] items-start gap-1.5 sm:justify-between xl:gap-1.5">
           <div className="flex justify-center items-center gap-2 text-white text-2xl not-italic font-medium leading-[normal]">
             ${price}
             <div className="flex justify-center items-center gap-2 bg-white px-[0.5rem] py-[0.25rem] rounded-[2.25rem]">

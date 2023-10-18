@@ -1,9 +1,15 @@
 import { ReactComponent as ArrowDownSvg } from "../assets/icons/dashicons_arrow-down.svg";
 import Icon from "@ant-design/icons";
-
 import { Column } from "@ant-design/plots";
+import { useMedia } from "react-use";
 
 const Chart = () => {
+  const isWide = useMedia("(min-width:768px)");
+  const isSmall = useMedia("(min-width:768px)");
+
+  const chartWidth = isWide ? 480 : isSmall ? 360 : 260;
+  const colWidth = isWide ? 48 : 36;
+
   const data = [
     {
       date: "1-10 Aug",
@@ -34,7 +40,8 @@ const Chart = () => {
     data,
 
     autofFit: true,
-    width: 480,
+    height: 155,
+    width: chartWidth,
     xField: "date",
     yField: "sales",
     seriesField: "date",
@@ -93,7 +100,7 @@ const Chart = () => {
     columnStyle: {
       radius: 8,
     },
-    minColumnWidth: 48,
+    minColumnWidth: colWidth,
     meta: {
       sales: {
         min: 20,
@@ -107,7 +114,7 @@ const Chart = () => {
   };
 
   return (
-    <div className="flex flex-col items-start self-stretch gap-10  px-10 pt-8 pb-4">
+    <div className="flex flex-col items-center self-stretch gap-10  px-10 pt-8 pb-4">
       <div className="flex justify-between items-end self-stretch">
         <div className="flex items-end gap-2">
           <p className="text-[#1E1E1E] text-xl not-italic font-medium leading-[normal] tracking-[-0.03125rem]">
@@ -124,7 +131,7 @@ const Chart = () => {
           <Icon component={() => <ArrowDownSvg className="fill-[#1E1E1E]" />} />
         </div>
       </div>
-      <div className="flex flex-[1_0_0] self-stretch">
+      <div className="flex flex-[1_0_0] ">
         <Column {...config} />
       </div>
     </div>

@@ -98,7 +98,7 @@ const App = () => {
           />
         </Sider>
         <Layout
-          className="site-layout bg-white flex flex-col items-start gap-12 px-12 py-0;"
+          className="site-layout bg-white flex flex-col items-start gap-12 pl-6 pr-1 sm:px-12 sm:py-0;"
           theme="light"
         >
           <Header className="bg-white w-full h-auto px-0 pt-8">

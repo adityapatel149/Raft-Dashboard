@@ -119,6 +119,8 @@ const columns = [
     dataIndex: "people",
 
     render: (text, record) => <People people={record.people} />,
+
+    responsive: ["sm"],
   },
 ];
 
@@ -144,7 +146,7 @@ const Transactions = () => {
     >
       <div className="flex flex-start flex-col self-stretch gap-8">
         <div className="flex self-stretch justify-between items-center">
-          <p className="text-neutral-950 text-[2.5rem] not-italic font-medium leading-[normal] ">
+          <p className="text-neutral-950 text-[1.5rem] sm:text-[2.5rem] not-italic font-medium leading-[normal] ">
             Transaction History
           </p>
           <Dropdown
@@ -153,8 +155,8 @@ const Transactions = () => {
             placement="bottomLeft"
           >
             <Button className="border-0">
-              <div className="flex rounded-[0.75rem] border border-[#EEE] border-solid inline-flex items-center gap-3 px-[1.25rem] py-3 ">
-                <CalendarSvg className="fill-[#989FA8] w-8 h-8" />
+              <div className="flex rounded-[0.75rem] border border-[#EEE] border-solid inline-flex items-center gap-2 sm:gap-3 p-2 sm:px-[1.25rem] sm:py-3 ">
+                <CalendarSvg className="fill-[#989FA8] w-6 h-6 sm:w-8 sm:h-8" />
                 <p className="text-neutral-800 text-xl not-italic font-normal leading-[normal] tracking-[-0.05rem]">
                   Month
                 </p>
@@ -171,8 +173,8 @@ const Transactions = () => {
             placement="bottomLeft"
           >
             <Button className="border-0">
-              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
-                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] ">
+              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] p-2 sm:px-8 sm:py-3 rounded-[0.6rem]">
+                <p className="text-neutral-700 text-lg sm:text-xl not-italic font-light leading-[normal] ">
                   Recepient
                 </p>
                 <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
@@ -186,8 +188,8 @@ const Transactions = () => {
             placement="bottomLeft"
           >
             <Button className="border-0">
-              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
-                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] ">
+              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] p-2 sm:px-8 sm:py-3  rounded-[0.6rem]">
+                <p className="text-neutral-700 text-lg sm:text-xl not-italic font-light leading-[normal] ">
                   Amount
                 </p>
                 <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
@@ -201,8 +203,8 @@ const Transactions = () => {
             placement="bottomLeft"
           >
             <Button className="border-0">
-              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] px-8 py-3 rounded-[0.6rem]">
-                <p className="text-neutral-700 text-xl not-italic font-light leading-[normal] ">
+              <div className="inline-flex items-center gap-2 bg-[#F3F4F8] p-2 sm:px-8 sm:py-3 rounded-[0.6rem]">
+                <p className="text-neutral-700 text-lg sm:text-xl not-italic font-light leading-[normal] ">
                   Status
                 </p>
                 <ArrowDownSvg className="stroke-[#989FA8] w-6 h-6" />
