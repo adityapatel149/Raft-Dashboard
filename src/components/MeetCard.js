@@ -12,7 +12,7 @@ const MeetCard = ({ title, time, icon }) => {
         <p className="text-neutral-950 text-xl not-italic font-medium leading-[normal] ">
           {title}
         </p>
-        <div className="flex justify-between items-start self-stretch">
+        <div className="flex flex-col gap-2 xl:flex-row xl:justify-between items-start self-stretch">
           <div className="flex items-center gap-3">
             <Icon
               component={() => <VideoSvg className="fill-[#989FA8] w-7 h-7" />}
@@ -21,7 +21,7 @@ const MeetCard = ({ title, time, icon }) => {
               Google Meet
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3 xl:gap-2">
             <Icon
               component={() => (
                 <ClockSvg className="stroke-[#989FA8] w-7 h-7" />

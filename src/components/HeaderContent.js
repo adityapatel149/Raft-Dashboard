@@ -4,21 +4,17 @@ import { ReactComponent as SearchSvg } from "../assets/icons/iconamoon_search.sv
 
 const HeaderContent = () => {
   return (
-    <div className="flex w-full flex-col items-start gap-12">
-      <div className="header flex w-full justify-between items-center">
+    <div className="flex  flex-col items-start gap-12">
+      <div className="header flex self-stretch justify-between items-center">
         <div className="heading flex items-center gap-8 flex-[1_0_0]">
           <div className="flex w-[6.5rem] h-[6.5rem] justify-center items-center p-1 rounded-[6.5rem] border-4 border-solid border-t-[#6E62E5] border-[#EEE] rotate-45">
             <Badge
               count={5}
               color="#6E62E5"
               offset={[-8, 8]}
-              className="w-full h-full -rotate-45"
+              className="-rotate-45"
             >
-              <Avatar
-                src="/images/profilepic.jpeg"
-                shape="circle"
-                className="w-full h-full"
-              />
+              <Avatar src="/images/profilepic.jpeg" shape="circle" size={90} />
               <div className="bg-white absolute w-6 h-6 rounded-3xl right-0 top-0 translate-x-1 -translate-y-1" />
             </Badge>
           </div>

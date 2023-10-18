@@ -1,10 +1,13 @@
 import React from "react";
+import { useMedia } from "react-use";
 import Banner from "./Banner";
 import Logo from "./Logo";
 import HeaderContent from "./HeaderContent";
 import SalesCard from "./SalesCard";
 import Transactions from "./Transactions";
 import RightSidebar from "./RightSidebar";
+import Promo from "./Promo";
+import Meetings from "./Meetings";
 
 import { ReactComponent as ClockSvg } from "../assets/icons/ci_clock.svg";
 import menuItems from "../menuItems";
@@ -22,6 +25,18 @@ import {
 const { Header, Content, Footer, Sider } = Layout;
 
 const App = () => {
+  const isWide = useMedia("(min-width: 1200px)");
+
+  const content = !isWide ? (
+    <div className="flex self-stretch flex-col items-start gap-10">
+      <Promo />
+      <div className="h-px self-stretch bg-[#EEF1F6]" />
+      <Meetings />
+    </div>
+  ) : (
+    <div></div>
+  );
+
   return (
     <ConfigProvider
       theme={{
@@ -70,6 +85,7 @@ const App = () => {
           className="sidebar overflow-auto fixed left-0 inset-y-0 lg:p-5 border-l-0 border-t-0 border-b-0 border-r-2 border-r-[#eee] border-solid"
           breakpoint={"lg"}
           collapsible
+          trigger={null}
           theme="light"
           width="18%"
         >
@@ -92,12 +108,13 @@ const App = () => {
             <Banner />
             <SalesCard />
             <Transactions />
+            {content}
           </Content>
         </Layout>
         <Sider
-          /*breakpoint={"lg"}*/
-          /*collapsedWidth={0}*/
-          /*trigger={null}*/
+          breakpoint={"xl"}
+          collapsedWidth={0}
+          trigger={null}
           theme="light"
           width="24%"
         >
